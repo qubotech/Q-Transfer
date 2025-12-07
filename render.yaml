@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: q-transfer
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    # Render will automatically use port 3000 from EXPOSE in Dockerfile
+    envVars:
+      - key: NODE_ENV
+        value: production
+    # Health check configuration
+    healthCheckPath: /
+    autoDeploy: true
+    # Optional: Custom domain
+    # customDomain: your-domain.com
