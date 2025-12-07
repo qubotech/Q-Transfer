@@ -922,7 +922,7 @@ x-peers:empty~x-instructions {
 :root {
     --icon-size: 24px;
     --peer-width: 120px;
-    color-scheme: light dark;
+    color-scheme: light only;
 }
 
 /*
@@ -990,26 +990,25 @@ body {
     --shadow-color-dialog-cover-rgb: var(--lt-shadow-color-dialog-cover-rgb);
 }
 
-/* Dark theme colors */
+/* Dark theme colors - OVERRIDDEN to force Light Theme (QUBO) */
 body.dark-theme {
-    --text-color: var(--dt-text-color);
-    --dialog-bg-color: var(--dt-dialog-bg-color);
-    --bg-color: var(--dt-bg-color);
-    --bg-color-secondary: var(--dt-bg-color-secondary);
-    --border-color: var(--dt-border-color);
-    --badge-color: var(--dt-badge-color);
-    --lang-hr-color: var(--dt-lang-hr-color);
+    --text-color: var(--lt-text-color);
+    --dialog-bg-color: var(--lt-dialog-bg-color);
+    --bg-color: var(--lt-bg-color);
+    --bg-color-secondary: var(--lt-bg-color-secondary);
+    --border-color: var(--lt-border-color);
+    --badge-color: var(--lt-badge-color);
+    --lang-hr-color: var(--lt-lang-hr-color);
 
-    --shadow-color-secondary-rgb: var(--dt-shadow-color-secondary-rgb);
-    --shadow-color-secondary-cover-rgb: var(--dt-shadow-color-secondary-cover-rgb);
-    --shadow-color-dialog-rgb: var(--dt-shadow-color-dialog-rgb);
-    --shadow-color-dialog-cover-rgb: var(--dt-shadow-color-dialog-cover-rgb);
+    --shadow-color-secondary-rgb: var(--lt-shadow-color-secondary-rgb);
+    --shadow-color-secondary-cover-rgb: var(--lt-shadow-color-secondary-cover-rgb);
+    --shadow-color-dialog-rgb: var(--lt-shadow-color-dialog-rgb);
+    --shadow-color-dialog-cover-rgb: var(--lt-shadow-color-dialog-cover-rgb);
 }
 
-/* Styles for users who prefer dark mode at the OS level */
+/* DISABLED: Force light theme always - QUBO white-with-blue-gradient aesthetic */
+/* 
 @media (prefers-color-scheme: dark) {
-
-    /* defaults to dark theme */
     body {
         --text-color: var(--dt-text-color);
         --dialog-bg-color: var(--dt-dialog-bg-color);
@@ -1025,8 +1024,6 @@ body.dark-theme {
         --shadow-color-dialog-cover-rgb: var(--dt-shadow-color-dialog-cover-rgb);
     }
 
-
-    /* Override dark mode with light mode styles if the user decides to swap */
     body.light-theme {
         --text-color: var(--lt-text-color);
         --dialog-bg-color: var(--lt-dialog-bg-color);
@@ -1042,6 +1039,7 @@ body.dark-theme {
         --shadow-color-dialog-cover-rgb: var(--lt-shadow-color-dialog-cover-rgb);
     }
 }
+*/
 
 /* Colored Elements */
 body {
