@@ -923,6 +923,40 @@ x-peers:empty~x-instructions {
     --icon-size: 24px;
     --peer-width: 120px;
     color-scheme: light only;
+
+    /* QUBO Specific Colors */
+    --color-primary: #5044E5;
+    --color-primary-light: #4d8cea;
+    --gradient-primary: linear-gradient(to right, #5044E5, #4d8cea);
+}
+
+/* QUBO Logo in Header */
+.qubo-logo {
+    height: 40px;
+    width: auto;
+    margin-right: auto;
+    /* Pushes everything else to the right */
+    margin-left: 10px;
+    object-fit: contain;
+}
+
+/* Gradient Text Effect */
+h2,
+a,
+.text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: var(--color-primary);
+    /* Fallback */
+    font-weight: 700 !important;
+    /* Make it pop */
+}
+
+/* Ensure icons usually next to links/buttons take the primary color if not gradient */
+.icon {
+    fill: var(--color-primary);
 }
 
 /*
@@ -932,9 +966,10 @@ x-peers:empty~x-instructions {
 /* Default colors */
 body {
     /* Constant colors - QUBO Blue Gradient Theme */
-    --primary-color: #5B8DEF;
-    --primary-color-light: #7BA8FF;
-    --primary-color-dark: #4A74D9;
+    --primary-color: #5044E5;
+    /* Updated to QUBO Primary */
+    --primary-color-light: #4d8cea;
+    --primary-color-dark: #3a32a3;
     --paired-device-color: #00a69c;
     --public-room-color: #ed9d01;
     --accent-color: var(--primary-color);
