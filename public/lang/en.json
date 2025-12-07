@@ -18,7 +18,7 @@
     "instructions": {
         "no-peers_data-drop-bg": "Release to select recipient",
         "no-peers-title": "Open Q-Transfer on other devices to send files",
-        "no-peers-text": "Pair devices or enter a public room to be discoverable on other networks",
+        "no-peers-subtitle": "Pair devices or enter a public room to be discoverable on other networks",
         "instructions-desktop": "Right-click to send text or invite",
         "instructions-mobile": "Long-press to send text or invite",
         "file-received": "File received!",
