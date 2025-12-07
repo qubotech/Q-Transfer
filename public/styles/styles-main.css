@@ -954,9 +954,11 @@ a,
     /* Make it pop */
 }
 
-/* Ensure icons usually next to links/buttons take the primary color if not gradient */
+/* Ensure icons use the gradient */
 .icon {
-    fill: var(--color-primary);
+    fill: url(#qubo-gradient);
+    /* Fallback for browsers that might strictly need a color if URL fails (though URL is standard for SVG fill) */
+    /* fill: var(--color-primary); Note: CSS fill doesn't support fallback syntax like background-image */
 }
 
 /*
